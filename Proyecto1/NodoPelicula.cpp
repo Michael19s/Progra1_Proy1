@@ -26,13 +26,13 @@ NodoPelicula* NodoPelicula::getSiguiente()
 	return aSiguiente;
 }
 
-//metodo que se encarga de modificar el valor de la pelicula
+//metodo que se encarga de modificar el valor del apuntador de la pelicula
 void NodoPelicula::setPelicula(Pelicula* pPelicula)
 {
 	aPelicula = pPelicula;
 }
 
-//metodo que se encarga de retornar el valor de la pelicula
+//metodo que se encarga de retornar el valor del apuntador a la pelicula
 Pelicula* NodoPelicula::getPelicula()
 {
 	return aPelicula;

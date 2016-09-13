@@ -48,19 +48,19 @@ bool ListaPelicula::CompararPelicula(string pCodigo, NodoPelicula* pNodoPelicula
 	return lvValorRetorno;
 }
 //Metodo encargado de buscar una pelicula y retornar su informacion
-bool ListaPelicula::BucarPelicula(string pCodigo)
-{
-	NodoPelicula* lvActual = aNodoPelicula;
-	Pelicula* lvPelicula = NULL;
-	while (lvActual != NULL)
-	{
-		lvPelicula = lvActual ->getPelicula();
-		if (pCodigo == lvPelicula -> getCodigo())
-			return lvPelicula;
-		else
-			lvActual = lvActual -> getSiguiente();
-	}
-}
+//bool ListaPelicula::BucarPelicula(string pCodigo)
+//{
+//	NodoPelicula* lvActual = aNodoPelicula;
+//	Pelicula* lvPelicula = NULL;
+//	while (lvActual != NULL)
+//	{
+//		lvPelicula = lvActual ->getPelicula();
+//		if (pCodigo == lvPelicula -> getCodigo())
+//			return lvPelicula;
+//		else
+//			lvActual = lvActual -> getSiguiente();
+//	}
+//}
 //Metodo encargado de agregar una pelicula a la lista, se realiza el metodo de manera que al agregar una pelicula se agregue automaticamente al inicio 
 bool ListaPelicula::AgregarInicio(string pCodigo, string pNombre, string pGenero, string pTipo, string pTipoPublico, string pIdioma, string pSinopsis)
 {

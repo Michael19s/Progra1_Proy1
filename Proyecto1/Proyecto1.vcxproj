@@ -64,15 +64,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Horario.h" />
     <ClInclude Include="Pelicula.h" />
     <ClInclude Include="ListaPelicula.h" />
     <ClInclude Include="NodoPelicula.h" />
+    <ClInclude Include="Sala.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Horario.cpp" />
     <ClCompile Include="Pelicula.cpp" />
     <ClCompile Include="ListaPelicula.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NodoPelicula.cpp" />
+    <ClCompile Include="Sala.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

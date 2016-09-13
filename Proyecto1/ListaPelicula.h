@@ -19,7 +19,7 @@ public:
 	~ListaPelicula(void);
 	bool ListaVacia();
 	bool ExistePelicula(string);
-	bool BucarPelicula(string);
+	//bool BucarPelicula(string);
 	bool AgregarInicio(string, string, string, string, string, string, string);
 	bool CompararPelicula(string, NodoPelicula*);
 	bool Elimina(string pCodigo);

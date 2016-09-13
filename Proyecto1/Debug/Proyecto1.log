@@ -1,15 +1,20 @@
-﻿Build started 9/12/2016 11:55:16 PM.
+﻿Build started 9/13/2016 3:22:53 PM.
      1>Project "C:\Users\Maykol Burgos\documents\visual studio 2012\Projects\Proyecto1\Proyecto1\Proyecto1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ListaPelicula.cpp NodoPelicula.cpp
-         NodoPelicula.cpp
-         ListaPelicula.cpp
-     1>c:\users\maykol burgos\documents\visual studio 2012\projects\proyecto1\proyecto1\listapelicula.cpp(50): error C2078: hay demasiados inicializadores
-     1>c:\users\maykol burgos\documents\visual studio 2012\projects\proyecto1\proyecto1\listapelicula.cpp(50): error C2440: 'inicializando' : no se puede realizar la conversión de 'std::string' a 'NodoPelicula *'
-                 No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Sala.cpp main.cpp
+         main.cpp
+         Sala.cpp
          Generando código...
-     1>Done Building Project "C:\Users\Maykol Burgos\documents\visual studio 2012\Projects\Proyecto1\Proyecto1\Proyecto1.vcxproj" (Build target(s)) -- FAILED.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Maykol Burgos\documents\visual studio 2012\Projects\Proyecto1\Debug\Proyecto1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Maykol Burgos\documents\visual studio 2012\Projects\Proyecto1\Debug\Proyecto1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Maykol Burgos\documents\visual studio 2012\Projects\Proyecto1\Debug\Proyecto1.lib" /MACHINE:X86 Debug\Horario.obj
+         Debug\Pelicula.obj
+         Debug\ListaPelicula.obj
+         Debug\main.obj
+         Debug\NodoPelicula.obj
+         Debug\Sala.obj
+         Proyecto1.vcxproj -> C:\Users\Maykol Burgos\documents\visual studio 2012\Projects\Proyecto1\Debug\Proyecto1.exe
+     1>Done Building Project "C:\Users\Maykol Burgos\documents\visual studio 2012\Projects\Proyecto1\Proyecto1\Proyecto1.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.34
+Time Elapsed 00:00:01.31
