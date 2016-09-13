@@ -64,12 +64,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="InfoPelicula.h" />
+    <ClInclude Include="Pelicula.h" />
     <ClInclude Include="ListaPelicula.h" />
     <ClInclude Include="NodoPelicula.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="InfoPelicula.cpp" />
+    <ClCompile Include="Pelicula.cpp" />
     <ClCompile Include="ListaPelicula.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NodoPelicula.cpp" />

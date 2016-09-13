@@ -3,9 +3,9 @@
 //Constructor de la clase, se crea el apuntador  a la clase que contiene la informacion de la pelicula
 //Ademas se le pasan por parametro todos los elementos que requiere la clase Infopelicula para alamacenar dicha informacion
 //Por otro lado se inicializa el puntero aSiguiente en NULL para que posteriormente pueda cumplir su proposito en la lista de la pelicula
-NodoPelicula::NodoPelicula(string pNombre, string pGenero, string pTipo, string pTipoPublico, string pIdioma, string pSinopsis)
+NodoPelicula::NodoPelicula(string pCodigo, string pNombre, string pGenero, string pTipo, string pTipoPublico, string pIdioma, string pSinopsis)
 {
-	aInfoPelicula = new InfoPelicula(pNombre, pGenero, pTipo, pTipoPublico, pIdioma, pSinopsis);
+	aPelicula = new Pelicula(pCodigo, pNombre, pGenero, pTipo, pTipoPublico, pIdioma, pSinopsis);
 	aSiguiente = NULL;
 }
 
@@ -24,4 +24,16 @@ void NodoPelicula::setSiguiente(NodoPelicula* pSiguiente)
 NodoPelicula* NodoPelicula::getSiguiente()
 {
 	return aSiguiente;
+}
+
+//metodo que se encarga de modificar el valor de la pelicula
+void NodoPelicula::setPelicula(Pelicula* pPelicula)
+{
+	aPelicula = pPelicula;
+}
+
+//metodo que se encarga de retornar el valor de la pelicula
+Pelicula* NodoPelicula::getPelicula()
+{
+	return aPelicula;
 }

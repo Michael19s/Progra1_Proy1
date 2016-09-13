@@ -2,18 +2,20 @@
 #define NodoPelicula_H
 
 #pragma once
-#include "InfoPelicula.h"
+#include "Pelicula.h"
 
 class NodoPelicula
 {
 private:
-	InfoPelicula* aInfoPelicula;
+	Pelicula* aPelicula;
 	NodoPelicula* aSiguiente;
 
 public:
-	NodoPelicula(string, string, string, string, string, string);
+	NodoPelicula(string, string, string, string, string, string, string);
 	~NodoPelicula(void);
 	void setSiguiente(NodoPelicula*);
 	NodoPelicula* getSiguiente();
+	void setPelicula(Pelicula*);
+	Pelicula* getPelicula();
 };
 #endif

@@ -2,6 +2,9 @@
 #define ListaPelicula_H
 
 #pragma once
+#include <sstream>
+#include <string>
+
 #include "NodoPelicula.h"
 
 class ListaPelicula
@@ -14,8 +17,13 @@ private:
 public:
 	ListaPelicula();
 	~ListaPelicula(void);
-	void Agrega(string, string, string, string, string, string);
-	void Elimina(int pPosicion);
+	bool ListaVacia();
+	bool ExistePelicula(string);
+	bool BucarPelicula(string);
+	bool AgregarInicio(string, string, string, string, string, string, string);
+	bool CompararPelicula(string, NodoPelicula*);
+	bool Elimina(string pCodigo);
+	string toString();
 };
 #endif
 
