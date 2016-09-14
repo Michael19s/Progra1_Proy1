@@ -11,7 +11,7 @@ class Sala
 private:
 	string aTipo;
 	int aDisponibilidadAsientos;
-	char aAsientos[10][6];
+	char aAsientos[6][10];
 	char aEstadoAsiento;
 
 public:

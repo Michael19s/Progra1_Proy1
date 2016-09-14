@@ -41,26 +41,13 @@ bool ListaPelicula::CompararPelicula(string pCodigo, NodoPelicula* pNodoPelicula
 	Pelicula* lvPelicula = NULL;
 	if (pNodoPelicula != NULL)
 	{
-		lvPelicula = pNodoPelicula ->getPelicula();/*Lo que se pretende con este proceso es que la variable pelicula tenga acceso al get codigo que se utiliza posteriormente*/
+		lvPelicula = pNodoPelicula -> getPelicula();
 		if (pCodigo == lvPelicula -> getCodigo())
 			lvValorRetorno = true;
 	}
 	return lvValorRetorno;
 }
-//Metodo encargado de buscar una pelicula y retornar su informacion
-//bool ListaPelicula::BucarPelicula(string pCodigo)
-//{
-//	NodoPelicula* lvActual = aNodoPelicula;
-//	Pelicula* lvPelicula = NULL;
-//	while (lvActual != NULL)
-//	{
-//		lvPelicula = lvActual ->getPelicula();
-//		if (pCodigo == lvPelicula -> getCodigo())
-//			return lvPelicula;
-//		else
-//			lvActual = lvActual -> getSiguiente();
-//	}
-//}
+
 //Metodo encargado de agregar una pelicula a la lista, se realiza el metodo de manera que al agregar una pelicula se agregue automaticamente al inicio 
 bool ListaPelicula::AgregarInicio(string pCodigo, string pNombre, string pGenero, string pTipo, string pTipoPublico, string pIdioma, string pSinopsis)
 {
@@ -134,12 +121,26 @@ string ListaPelicula::toString()
 {
 	stringstream lvMensaje;
 	NodoPelicula* lvActual = aNodoPelicula;
+	Pelicula* lvPelicula = NULL;
+	string lvCodigoRetorno = " ";
+	string lvNombreRetorno = " ";
+
 	while(lvActual != NULL)
 	{
-		lvMensaje << lvActual -> getPelicula() << "->";
+		lvPelicula = lvActual->getPelicula();
+		lvNombreRetorno = lvPelicula -> getNombre();
+		lvCodigoRetorno = lvPelicula -> getCodigo();
+		lvMensaje << "| " << lvNombreRetorno << "(" << lvCodigoRetorno << ") | ";
 		lvActual = lvActual -> getSiguiente();
 	}
-	lvMensaje << "NULL";
 	return lvMensaje.str();
 }
 
+string ListaPelicula::ImprimirPelicula(string pCodigo)
+{
+	NodoPelicula* lvActual = aNodoPelicula;
+	if (CompararPelicula(pCodigo, lvActual) == true)
+	{
+
+	}
+}

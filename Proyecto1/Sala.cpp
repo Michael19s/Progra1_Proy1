@@ -3,6 +3,9 @@
 
 Sala::Sala(void)
 {
+	aTipo = " ";
+	aDisponibilidadAsientos = 60;
+	aEstadoAsiento = 'D';
 	for(int i = 0; i<6; i++)
 		for(int j = 0; j<10; j++)
 			aAsientos[i][j] = ' ';
@@ -25,7 +28,6 @@ string Sala::getTipo()
 }
 
 //metodo que se encarga de modificar el valor de una posicion especifica de la matriz
-//ademas, disminuye la cantidad de asientos disponibles, ejempo: tenia 60 asientos
 void Sala::setEstadoAsiento(int pFila, int pColumna, char pValor)
 {
 	if ((pValor == 'O') || (pValor == 'R'))
@@ -65,8 +67,12 @@ string Sala::ImprimeAsientos()
 {
 	stringstream lvMensaje;
 	for(int i = 0; i < 6; i++)
+	{
 		for(int j = 0; j < 10; j++)
-			lvMensaje << aAsientos[i][j] << " ";
-	lvMensaje << endl;
+			lvMensaje << "| " << aAsientos[i][j] << " " << "|";
+		lvMensaje << "\n";
+		lvMensaje << "\n";
+	}
+	lvMensaje << "\n";
 	return lvMensaje.str();
 }
