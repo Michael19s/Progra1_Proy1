@@ -2,6 +2,7 @@
 #define Sala_H
 
 #pragma once
+#include "Asiento.h"
 #include <sstream>
 #include <string>
 
@@ -9,18 +10,19 @@ using namespace std;
 class Sala
 {
 private:
+	Asiento* aAsiento;
 	string aTipo;
-	int aDisponibilidadAsientos;
 	char aAsientos[6][10];
-	char aEstadoAsiento;
+	int aDisponibilidadAsientos;
 
 public:
-	Sala(void);
+	Sala();
 	~Sala(void);
 	void setTipo(string);
 	string getTipo();
-	void setEstadoAsiento(int, int, char);
+	void setEstadoAsiento(int, int, Asiento*);
 	char getEstadoAsiento(int, int);
+	void setEstadoAsiento();
 	int getDisponibilidadAsientos();
 	void InicializarAsientos();
 	string ImprimeAsientos();

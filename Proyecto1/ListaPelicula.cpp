@@ -3,6 +3,8 @@
 
 ListaPelicula::ListaPelicula()
 {
+	aContador = 0;
+	aNodoPelicula = NULL;
 }
 
 
@@ -17,19 +19,23 @@ bool ListaPelicula::ListaVacia()
 		lvValorRetorno = true;
 	return lvValorRetorno;
 }
+
 //Metodo encargado de buscar las peliculas por codigo y determinar si existe
 bool ListaPelicula::ExistePelicula(string pCodigo)
 {
 	bool lvValorRetorno = false;
 	NodoPelicula* lvActual = aNodoPelicula;
 	Pelicula* lvPelicula = NULL;
-	while ((lvActual != NULL)&&(lvValorRetorno = false))
+	if (ListaVacia() == false)
 	{
-		lvPelicula = lvActual ->getPelicula();
-		if (pCodigo == lvPelicula -> getCodigo())
-			lvValorRetorno = true;
-		else
-			lvActual = lvActual -> getSiguiente();
+		while ((lvActual != NULL)&&(lvValorRetorno == false))
+		{
+			lvPelicula = lvActual -> getPelicula();
+			if (lvPelicula -> getCodigo() == pCodigo)
+				lvValorRetorno = true;
+			else
+				lvActual = lvActual -> getSiguiente();
+		}
 	}
 	return lvValorRetorno;
 }
@@ -55,14 +61,14 @@ bool ListaPelicula::AgregarInicio(string pCodigo, string pNombre, string pGenero
 	//Se utiliza un condicional para contemplar los dos panoramas si existe alguna pelicula o no existe ninguna
 	if (ListaVacia() == true)
 	{
-		aNodoPelicula->setSiguiente(new NodoPelicula(pCodigo, pNombre, pGenero, pTipo, pTipoPublico, pIdioma, pSinopsis));
+		aNodoPelicula =new NodoPelicula(pCodigo, pNombre, pGenero, pTipo, pTipoPublico, pIdioma, pSinopsis);
 		lvValorRetorno = true;
 		aContador++;
 	}
 	else
 	{
 		//Ya existen peliculas
-		if (ExistePelicula(pCodigo)==false)/*Se verifica si la pelicula ya esta porque si ya esta no se puede ingresar otra vez.*/
+		if (ExistePelicula(pCodigo) == false)/*Se verifica si la pelicula ya esta porque si ya esta no se puede ingresar otra vez.*/
 		{
 			NodoPelicula* lvAuxiliar;
 			lvAuxiliar = new NodoPelicula(pCodigo, pNombre, pGenero, pTipo, pTipoPublico, pIdioma, pSinopsis);
@@ -136,11 +142,11 @@ string ListaPelicula::toString()
 	return lvMensaje.str();
 }
 
-string ListaPelicula::ImprimirPelicula(string pCodigo)
-{
-	NodoPelicula* lvActual = aNodoPelicula;
-	if (CompararPelicula(pCodigo, lvActual) == true)
-	{
-
-	}
-}
+//string ListaPelicula::ImprimirPelicula(string pCodigo)
+//{
+//	NodoPelicula* lvActual = aNodoPelicula;
+//	if (CompararPelicula(pCodigo, lvActual) == true)
+//	{
+//
+//	}
+//}

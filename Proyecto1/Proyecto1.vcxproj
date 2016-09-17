@@ -64,14 +64,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Asiento.h" />
     <ClInclude Include="Horario.h" />
+    <ClInclude Include="ListaFuncion.h" />
+    <ClInclude Include="NodoFuncion.h" />
     <ClInclude Include="Pelicula.h" />
     <ClInclude Include="ListaPelicula.h" />
     <ClInclude Include="NodoPelicula.h" />
     <ClInclude Include="Sala.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Asiento.cpp" />
     <ClCompile Include="Horario.cpp" />
+    <ClCompile Include="ListaFuncion.cpp" />
+    <ClCompile Include="NodoFuncion.cpp" />
     <ClCompile Include="Pelicula.cpp" />
     <ClCompile Include="ListaPelicula.cpp" />
     <ClCompile Include="main.cpp" />

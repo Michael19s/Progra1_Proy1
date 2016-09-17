@@ -26,7 +26,9 @@ void main ()
 	Lista1 -> AgregarInicio(lvCodigo, lvNombre, lvGenero, lvTipo, lvTipoPublico, lvIdioma, lvSinopsis);
 	Lista1 -> AgregarInicio(lvCodigo2, lvNombre2, lvGenero2, lvTipo2, lvTipoPublico2, lvIdioma2, lvSinopsis2);
 	cout << Lista1 -> toString() << endl;
-	cout << Lista1 -> BuscarPelicula("ESC029") << endl;
+	//cout << Lista1 -> ExistePelicula(lvCodigo) << endl;
+	cout << Lista1 -> Elimina(lvCodigo);
+	cout << Lista1 -> toString() << endl;
 	system("pause");
 	//...................................................................................................
 
@@ -39,15 +41,19 @@ void main ()
 	//cout << Horario1.toString() << endl;
 	//system("pause");
 
-	//
+	//----------------------------------------------------------------------------------------------------
 	//Prueba funcionamiento de la sala
 	//Sala Sala1;
+	//Asiento* Asiento1 = new Asiento();
+	//Asiento1 -> setEstado('O');
+	//Asiento* Asiento2 = new Asiento();
+	//Asiento2 ->setEstado('R');
 	//Sala1.InicializarAsientos();
 	//cout << Sala1.ImprimeAsientos() << endl;
 	//system("pause");
 	//cout<<endl;
-	//Sala1.setEstadoAsiento(0, 0,'O');
-	//Sala1.setEstadoAsiento(5, 4,'R');
+	//Sala1.setEstadoAsiento(0, 0,Asiento1);
+	//Sala1.setEstadoAsiento(5, 4, Asiento2);
 	//cout << Sala1.ImprimeAsientos() << endl;
 	//cout << Sala1.getDisponibilidadAsientos() << endl;
 	//system("pause");
