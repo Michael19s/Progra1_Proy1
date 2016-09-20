@@ -22,8 +22,8 @@ public:
 	bool AgregarInicio(string, string, string, string, string, string, string);
 	bool CompararPelicula(string, NodoPelicula*);
 	bool Elimina(string pCodigo);
-	string toString();
-	string ImprimirPelicula(string);
+	string ImprimirLista();
+	Pelicula* BuscarPelicula(string);
 };
 #endif
 

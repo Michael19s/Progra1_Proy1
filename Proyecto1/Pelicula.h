@@ -35,12 +35,14 @@ public:
 	string getTipo();
 	//Metodos para actualizar y recibir el valor del atributo tipo publico
 	void setTipoPublico(string);
-	string getTipoPelicula();
+	string getTipoPublico();
 	//Metodos para actualizar y recibir el valor del atributo idioma
 	void setIdioma(string);
 	string getIdioma();
 	//Metodos para actualizar y recibir el valor del atributo sinopsis
 	void setSinopsis(string);
 	string getSinopsis();
+	//Metodo encargado de imprimir la informacion de la pelicula
+	string ImprimirPelicula(string);
 };
 #endif

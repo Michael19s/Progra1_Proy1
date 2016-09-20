@@ -13,12 +13,13 @@ private:
 	int aMinutos;
 
 public:
-	Horario(void);
+	Horario();
+	Horario(int, int);
 	~Horario(void);
 	void setHora(int);
 	int getHora();
 	void setMinutos(int);
 	int getMinutos();
-	string toString();
+	string ImprimirHorario();
 };
 #endif

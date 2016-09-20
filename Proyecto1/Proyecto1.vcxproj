@@ -65,6 +65,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Asiento.h" />
+    <ClInclude Include="Asientos.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="ListaFuncion.h" />
     <ClInclude Include="NodoFuncion.h" />
@@ -75,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Asiento.cpp" />
+    <ClCompile Include="Asientos.cpp" />
     <ClCompile Include="Horario.cpp" />
     <ClCompile Include="ListaFuncion.cpp" />
     <ClCompile Include="NodoFuncion.cpp" />

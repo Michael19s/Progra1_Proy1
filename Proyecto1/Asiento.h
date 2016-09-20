@@ -12,7 +12,7 @@ private:
 public:
 	Asiento();
 	~Asiento(void);
-	void setEstado(char);
+	bool setEstado(char);
 	char getEstado();
 };
 #endif

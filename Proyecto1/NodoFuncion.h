@@ -10,20 +10,20 @@ using namespace std;
 class NodoFuncion
 {
 private:
-	ListaPelicula* aListaPelicula;
-	Horario* aHorario;
-	Sala* aSala;
+	Pelicula* aPelicula;
+	Horario aHorario;
+	Sala aSala;
 	NodoFuncion* aSiguiente;
 
 public:
-	NodoFuncion(void);
+	NodoFuncion(int, int, string, string, Pelicula*);
 	~NodoFuncion(void);
-	void setListaPelicula(ListaPelicula*);
-	ListaPelicula* getListaPelicula();
-	void setHorario(Horario*);
-	Horario* getHorario();
-	void setSala(Sala*);
-	Sala* getSala();
+	void setPelicula(Pelicula*);
+	Pelicula* getPelicula();
+	void setHorario(Horario);
+	Horario getHorario();
+	void setSala(Sala);
+	Sala getSala();
 	void setSiguiente(NodoFuncion*);
 	NodoFuncion* getSiguiente();
 };

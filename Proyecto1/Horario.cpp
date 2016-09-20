@@ -1,10 +1,13 @@
 #include "Horario.h"
 
-
-Horario::Horario(void)
+Horario::Horario()
 {
-	aHora = 0;
-	aMinutos = 0;
+}
+
+Horario::Horario(int pHora, int pMinutos)
+{
+	aHora = pHora;
+	aMinutos = pMinutos;
 }
 
 
@@ -13,6 +16,7 @@ Horario::~Horario(void)
 }
 
 //metodo que se encarga de modificar el valor de la hora
+//Se toma como horas base 10, 1, 3, 5, 7, 9 y 11 para limitar las horas disponibles en el cine
 void Horario::setHora(int pHora)
 {
 	aHora = pHora;
@@ -37,7 +41,7 @@ int Horario::getMinutos()
 }
 
 //metodo encargado de imprimir en pantalla la hora en formato hora:minutos
-string Horario::toString()
+string Horario::ImprimirHorario()
 {
 	stringstream lvMensaje;
 	lvMensaje << aHora << ":" << aMinutos;

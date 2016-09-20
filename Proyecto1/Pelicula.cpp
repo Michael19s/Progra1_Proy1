@@ -72,7 +72,7 @@ void Pelicula::setTipoPublico(string pTipoPublico)
 }
 
 //Metodo encargado de retornar el valor del tipo de publico
-string Pelicula::getTipoPelicula()
+string Pelicula::getTipoPublico()
 {
 	return aTipoPublico;
 }
@@ -99,4 +99,23 @@ void Pelicula::setSinopsis(string pSinopsis)
 string Pelicula::getSinopsis()
 {
 	return aSinopsis;
+}
+
+//Metodo que se encarga de imprimir la informacion de la pelicula
+string Pelicula::ImprimirPelicula(string pCodigo)
+{
+	stringstream lvMensaje;
+	if (aCodigo == pCodigo)
+	{
+		lvMensaje << "Codigo: " << getCodigo() << "\n"; 
+		lvMensaje << "Nombre: " << getNombre() << "\n";
+		lvMensaje << "Genero: " << getGenero() << "\n";
+		lvMensaje << "Tipo: " << getTipo() << "\n";
+		lvMensaje << "Publico: " << getTipoPublico() << "\n";
+		lvMensaje << "Idioma: " << getIdioma() << "\n";
+		lvMensaje << "Sinopsis: " << getSinopsis() << "\n";
+	}
+	else
+		lvMensaje << "La pelicula no existe" << "\n";
+	return lvMensaje.str();
 }

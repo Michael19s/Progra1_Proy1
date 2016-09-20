@@ -11,6 +11,7 @@ ListaPelicula::ListaPelicula()
 ListaPelicula::~ListaPelicula(void)
 {
 }
+
 //Metodo que se encarga de verificar que la lista contenga o no informacion
 bool ListaPelicula::ListaVacia()
 {
@@ -123,7 +124,7 @@ bool ListaPelicula::Elimina(string pCodigo)
 }
 
 //Metodo encargado de imprimir en pantalla la lista
-string ListaPelicula::toString()
+string ListaPelicula::ImprimirLista()
 {
 	stringstream lvMensaje;
 	NodoPelicula* lvActual = aNodoPelicula;
@@ -142,11 +143,23 @@ string ListaPelicula::toString()
 	return lvMensaje.str();
 }
 
-//string ListaPelicula::ImprimirPelicula(string pCodigo)
-//{
-//	NodoPelicula* lvActual = aNodoPelicula;
-//	if (CompararPelicula(pCodigo, lvActual) == true)
-//	{
-//
-//	}
-//}
+//Metodo que se pretende ser usado en ListaFuncion para acceder a la pelicula que se requiere en la funcion
+//retornando directamente el puntero a la pelicula almacenada en el nodoPelicula
+Pelicula* ListaPelicula::BuscarPelicula(string pCodigo)
+{
+	NodoPelicula* lvActual = aNodoPelicula;
+	Pelicula* lvPelicula = NULL;
+	Pelicula* lvPeliculaRetorno = NULL;
+	if (ListaVacia() == false)
+	{
+		while (lvActual != NULL)
+		{
+			lvPelicula = lvActual -> getPelicula();
+			if (lvPelicula -> getCodigo() == pCodigo)
+				lvPeliculaRetorno = lvActual -> getPelicula();
+			else
+				lvActual = lvActual -> getSiguiente();
+		}
+	}
+	return lvPeliculaRetorno;
+}

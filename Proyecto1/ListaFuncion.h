@@ -12,12 +12,14 @@ public:
 	NodoFuncion* aNodoFuncion;
 
 public:
-	ListaFuncion(void);
+	ListaFuncion();
 	~ListaFuncion(void);
 	bool ListaVacia();
-	bool ExisteFuncion(string);
-	bool AgregaInicio();
-	bool Elimina();
+	bool ExisteFuncion(Pelicula*, string, string, int, int);
+	bool CompararFuncion(Pelicula*, string, string, int, int, NodoFuncion*);
+	bool AgregarInicio(int, int, string, string, Pelicula*);
+	bool Elimina(Pelicula*, string, string, int, int);
+	string ImprimirLista();
 };
 #endif
 
