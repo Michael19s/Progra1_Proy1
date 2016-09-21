@@ -60,7 +60,7 @@ string Sala::ImprimirSala()
 	Asientos* lvAsientos;
 	lvMensaje << getNombre() << "\n";
 	lvMensaje << getTipo() << "\n";
-	lvMensaje << getAsientos() -> ImprimeAsientos(); 
+	//lvMensaje << getAsientos() -> ImprimeAsientos(); 
 	return lvMensaje.str();
 }
 

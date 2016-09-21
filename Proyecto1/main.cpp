@@ -70,20 +70,28 @@ void main ()
 	desplegarTitulo("Titulo de prueba 2", 110);
 
 	//Prueba funcionamiento lista funcion
-	string lvCodigo = "ESC029";
-	string lvNombre = "EscuadronSuicida";
-	string lvGenero = "Accion";
-	string lvTipo = "3D";
-	string lvTipoPublico = "Adultos";
-	string lvIdioma = "InglesSub";
-	string lvSinopsis = "UnGrupoDeVillanos...";
-	ListaPelicula* ListaP = new ListaPelicula(); 
-	ListaP -> AgregarInicio(lvCodigo, lvNombre, lvGenero, lvTipo, lvTipoPublico, lvIdioma, lvSinopsis);
-	cout << ListaP -> ImprimirLista() << endl;
+	//string lvCodigo = "ESC029";
+	//string lvNombre = "EscuadronSuicida";
+	//string lvGenero = "Accion";
+	//string lvTipo = "3D";
+	//string lvTipoPublico = "Adultos";
+	//string lvIdioma = "InglesSub";
+	//string lvSinopsis = "UnGrupoDeVillanos...";
+	//ListaPelicula* ListaP = new ListaPelicula(); 
+	//ListaP -> AgregarInicio(lvCodigo, lvNombre, lvGenero, lvTipo, lvTipoPublico, lvIdioma, lvSinopsis);
+	//cout << ListaP -> ImprimirLista() << endl;
 	//Pelicula* lvPelicula = ListaP -> BuscarPelicula(lvCodigo);
-	ListaFuncion* ListaF = new ListaFuncion();
+	//ListaFuncion* ListaF = new ListaFuncion();
 	//ListaF -> AgregarInicio (11, 30, "VIP", "Sala1", lvPelicula);
-	cout << ListaF -> ImprimirLista() << endl;
+	//cout << ListaF -> ImprimirLista() << endl;
+	Asientos Asientos1;
+	
+	
+	Asientos1.InicializarAsientos();
+	Asientos1.ImprimeAsientos();
+	//Sala Sala1;
+	//Sala1.InicializarSala();
+	//cout << Sala1.ImprimirSala();
 	system("pause");
 	//Prueba funcionamiento de lista pelicula
 	//string lvCodigo = "ESC029";
